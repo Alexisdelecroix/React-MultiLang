@@ -1,7 +1,44 @@
-.App {
-  text-align: center;
+ .App {
+  box-sizing: border-box;
+  background-color: rgb(34, 34, 34);
+  height: 100vh;
+  margin-top: 0px;
 }
 
+.conteneur{
+  display: flex;
+  padding-top: 30px;
+}
+
+.icons{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 20%;
+  margin-left: 50px;
+  
+}
+
+.icons button{
+  width: 65px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.icons img{
+  height: 60px;
+  width: 60px;
+}
+
+h1{
+  font-size: 60px;
+  color: white;
+}
+
+h2{
+  color: white;
+}
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +72,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
