@@ -1,13 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ToggleLangs from './components/btnLang'
 import Layout from './components/layout';
+import './App.css';
+import MonContext from './context/myContext';
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-    <Layout>
-      
-    </Layout>
+    <MonContext>
+      <ToggleLangs />
+      <Layout />
+    </MonContext>
     </div>
   );
 }

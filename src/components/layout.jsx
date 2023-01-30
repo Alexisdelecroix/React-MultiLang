@@ -1,75 +1,73 @@
-import React, {  useContext, useState } from "react";
-
-import france from "../icons/france.svg";
-import spain from "../icons/spain.svg";
-import united from "../icons/united-kingdom.svg";
-import BtnLang from "./btnLang";
+import React, {  useContext} from "react";
+import { MyContext } from "../context/myContext";
 
 export default function Layout() {
 
 
-    const langData = [
-        {
+
+  //  Création tableau d'objet 
+    const langData = {
+       FR: {
           id: "fr",
           title: "Bonjour et bienvenue sur le site.",
           subtitle: "Découvrez nos fonctionnalités et nos services !",
-          img: "france",
         },
-        {
+
+      EN:  {
           id: "en",
           title: "Hello and welcome to the site.",
           subtitle: "Discover our features and services !",
-          img: "spain",
         },
-        {
+
+       ES: {
           id: "es",
           title: "Hola y bienvenido al sitio.",
           subtitle: "Descubra nuestras prestaciones y servicios ! ",
-          img: "united"
         },
-      ];
+    };
+
+      const {lang} = useContext(MyContext)
+
+  
+    // let langNavigateur;
+
+    // if (langData.indexOf(navigator.language) === -1) {
+    //       langNavigateur = 'en'
+    // } else {
+    //  langNavigateur = navigator.language
+    // }
+
+    // const [currentLang, setCurrentlang] = useState(langNavigateur)
 
 
-    const [currentLang, setCurrentlang] = useState(langData.some( donnes => donnes.id === navigator.language) ? navigator.language : 'en');
+      // function changelangFR() {
 
-    const nextLangFR= () => {
-        setCurrentlang('fr')
-    }
+      // setCurrentlang("fr") 
+      // }
 
-    const nextLangEN= () => {
-        setCurrentlang('en')
-    }
+      // function changelangEN() {
 
-    const nextLangES= () => {
-        setCurrentlang('es')
-    }
+      //   setCurrentlang("en") 
+      //   }
+
+      // function changelangES() {
+
+      //   setCurrentlang("es") 
+      //   }
+
 
 
   return (
-    <div className="conteneur">
-                
-      {/* <BtnLang nextLang={nextLangFR} img={donnes.id}/> */}
-      <BtnLang nextLang={nextLangFR} img=""/>
-      {/* <BtnLang nextLang={nextLangES} img={donnes.id}/> */}
+   
+          <div className="titre">
+          
+            {/* <h1>{donnes.id === currentLang ? donnes.title : ''}</h1> */}
+            <h1>{langData[lang].title}</h1>
 
-    
-        {/* <img src={france} alt="Photo Drapeau Français" />
-        <img src={spain} alt="Photo Drapeau Spain" />
-        <img src={united} alt="Photo Drapeau United" /> */}
-    
-
-      {langData.map((donnes) => {
-        if (donnes.id === currentLang) {
-        return (
-          <div key={donnes.id} className="titre">
-            <h1>{donnes.title}</h1>
-
-            <h2>{donnes.subtitle}</h2>
+            {/* <h2>{donnes.id === currentLang ? donnes.subtitle : ''}</h2> */}
+            <h2>{langData[lang].subtitle}</h2>
           </div>
-        
-        );
-        }
-      })}
-    </div>
+      
+  
   );
 }
