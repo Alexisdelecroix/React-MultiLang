@@ -3,12 +3,9 @@
   background-color: rgb(34, 34, 34);
   height: 100vh;
   margin-top: 0px;
-}
-
-.conteneur{
   display: flex;
-  padding-top: 30px;
   flex-wrap: wrap;
+  
 }
 
 .icons{
@@ -44,7 +41,7 @@ h2{
 @media screen and (max-width: 391px) {
   .icons{
     width: 90%;
-    margin: auto;
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

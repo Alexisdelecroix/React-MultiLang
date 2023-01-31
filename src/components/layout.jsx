@@ -28,33 +28,6 @@ export default function Layout() {
 
       const {lang} = useContext(MyContext)
 
-  
-    // let langNavigateur;
-
-    // if (langData.indexOf(navigator.language) === -1) {
-    //       langNavigateur = 'en'
-    // } else {
-    //  langNavigateur = navigator.language
-    // }
-
-    // const [currentLang, setCurrentlang] = useState(langNavigateur)
-
-
-      // function changelangFR() {
-
-      // setCurrentlang("fr") 
-      // }
-
-      // function changelangEN() {
-
-      //   setCurrentlang("en") 
-      //   }
-
-      // function changelangES() {
-
-      //   setCurrentlang("es") 
-      //   }
-
 
 
   return (
